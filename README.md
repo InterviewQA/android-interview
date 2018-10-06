@@ -17,7 +17,8 @@
 * [What is overloading and overriding in java?](#what-is-overloading-and-overriding-in-java)
 
 ## Core Android Questions
-* [What is difference between Serializable and Parcelable ? Which is best approach in Android ?]()
+* [What is difference between `Serializable` and `Parcelable`? Which is best approach in Android?](#what-is-difference-between-serializable-and-parcelable-which-is-best-approach-in-android)
+* [What is the difference between `Service` and `IntentService`? How is each used?](#what-is-the-difference-between-service-and-intentservice-how-is-each-used)
 
 ## Design Questions
 
@@ -45,7 +46,7 @@ Overriding concept comes in picture with inheritance when we have two methods wi
 
 [[↑] Back to top](#core-java-or-kotlin-questions)
 
-### What is difference between Serializable and Parcelable ? Which is best approach in Android ?
+### What is difference between `Serializable` and `Parcelable`? Which is best approach in Android?
 
 `Serializable` is a standard Java interface. You simply mark a class Serializable by implementing the interface, and Java will automatically serialize it in certain situations.
 
@@ -56,6 +57,27 @@ Overriding concept comes in picture with inheritance when we have two methods wi
 * https://www.toptal.com/android/interview-questions
 
 [[↑] Back to top](#core-android-questions)
+
+
+### What is the difference between `Service` and `IntentService?`? How is each used?
+
+`Service`: It is the base class for the Android services, that you can extend for creating any service. Since the service run inside the UI thread, it requires that you create a working thread for executing its work.
+
+`IntentService`: it is a subclass of Service, that simplifies your work. It works already in a working thread, and can receive asynchronous requests. So, you don't need to create it manually, or to worry about synchronization. You can simply extend it and override the method `onHandleIntent(Intent intent)`
+
+IntentService do for you:
+- Creates a default worker thread that executes all intents delivered to `onStartCommand()` separate from your application's main thread.
+- Creates a work queue that passes one intent at a time to your `onHandleIntent()` implementation, so you never have to worry about multi-threading.
+- Stops the service after all start requests have been handled, so you never have to call `stopSelf()`
+- Provides default implementation of `onBind()` that returns null.
+- Provides a default implementation of `onStartCommand()` that sends the intent to the work queue and then to your `onHandleIntent()` implementation.
+
+###### References
+
+* https://stackoverflow.com/questions/31451476/what-is-the-difference-between-service-intentservice-in-android
+
+[[↑] Back to top](#core-android-questions)
+
 
 ## Translations
 
