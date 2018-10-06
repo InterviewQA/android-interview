@@ -23,6 +23,7 @@
 ## Design Questions
 
 ## Data Storage Questions
+* [What are the different data storage options available on the Android platform?]()
 
 ## Architecture Questions
 
@@ -78,6 +79,17 @@ IntentService do for you:
 
 [[↑] Back to top](#core-android-questions)
 
+
+### What are the different data storage options available on the Android platform?
+**SharedPreference:** It stores data in XML files. It is the simplest way to store private data in the key-value pair.  
+**SQLite:** It stores structure data in the private database.  
+**Internal Storage:** It stores data in the device file system and any other app cannot read this data.  
+**External Storage:** Data is stored in the file system but it is accessible to all apps in the device  
+
+###### References
+* https://developer.android.com/guide/topics/data/data-storage
+
+[[↑] Back to top](#data-storage-questions)
 
 ## Translations
 
