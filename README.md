@@ -1,4 +1,6 @@
-<h1 align="center">Android Interview Questions</h1>
+# Android Interview Questions
+
+> A curated collection of Android interview questions and answers
 
 ## Table of Contents
 
@@ -11,21 +13,21 @@
 1. [Test Driven Development](#test-driven-development-questions)
 1. [Others](#others-questions)
 
-# Core Java or Kotlin Questions
+## Core Java or Kotlin Questions
 * [What is overloading and overriding in java?](#what-is-overloading-and-overriding-in-java)
 
-# Core Android Questions
+## Core Android Questions
 * [What is difference between Serializable and Parcelable ? Which is best approach in Android ?]()
 
-# Design Questions
+## Design Questions
 
-# Data Storage Questions
+## Data Storage Questions
 
-# Architecture Questions
+## Architecture Questions
 
-# Tools and Libraries Questions
+## Tools and Libraries Questions
 
-# Other Questions
+## Other Questions
 
 
 
@@ -53,7 +55,7 @@ Overriding concept comes in picture with inheritance when we have two methods wi
 
 * https://www.toptal.com/android/interview-questions
 
-[[↑] Back to top](#core-android)
+[[↑] Back to top](#core-android-questions)
 
 ## Translations
 
