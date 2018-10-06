@@ -61,10 +61,7 @@ Overriding concept comes in picture with inheritance when we have two methods wi
 
 
 ## Contributing
-
-
-### Contributing Guide
-
+You should make sure your question/answer is appropriate and unique for this repository and if you don't know how to contribute, you should read [CONTRIBUTING](/CONTRIBUTING) guide before pull request.
 
 ## License
 
