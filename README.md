@@ -19,6 +19,7 @@
 ## Core Android Questions
 * [What is difference between `Serializable` and `Parcelable`? Which is best approach in Android?](#what-is-difference-between-serializable-and-parcelable-which-is-best-approach-in-android)
 * [What is the difference between `Service` and `IntentService`? How is each used?](#what-is-the-difference-between-service-and-intentservice-how-is-each-used)
+* [What is the context ? How is it used?](#what-is-the-context-how-is-it-used)
 
 ## Design Questions
 
@@ -76,6 +77,28 @@ IntentService do for you:
 ###### References
 
 * https://stackoverflow.com/questions/31451476/what-is-the-difference-between-service-intentservice-in-android
+
+### What is the context ? How is it used?
+
+As the name suggests, it’s the context of the current state of the application/object. It lets newly-created objects understand what has been going on. Typically you call it to get information regarding another part of your program (activity and package/application).
+
+And also, Context is a handle to the system, it provides services like resolving resources, obtaining access to databases and preferences, and so on. An Android app has activities. It’s like a handle to the environment your application is currently running in. The activity object inherits the Context object. It allows access to application specific resources and class and information about the application environment.
+
+Wrong use of Context can easily lead to memory leaks in an android application.
+
+There are many different types of context in android, so let’s understand what are those, how to use those and when to use which one.
+
+`Application Context`
+It is an instance which is the singleton and can be accessed in an activity via getApplicationContext(). This context is tied to the lifecycle of an application. The application context can be used where you need a context whose lifecycle is separate from the current context or when you are passing a context beyond the scope of an activity.
+
+`Activity Context`
+This context is available in an activity. This context is tied to the lifecycle of an activity. The activity context should be used when you are passing the context in the scope of an activity or you need the context whose lifecycle is attached to the current context.
+
+`getContext() in ContentProvider`
+This context is the application context and can be used similar to the application context. This can be accessed via getContext() method.
+
+###### References
+* https://blog.mindorks.com/understanding-context-in-android-application-330913e32514
 
 [[↑] Back to top](#core-android-questions)
 
