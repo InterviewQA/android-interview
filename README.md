@@ -100,6 +100,17 @@ This context is the application context and can be used similar to the applicati
 ###### References
 * https://blog.mindorks.com/understanding-context-in-android-application-330913e32514
 
+
+### What is a BuildType in Gradle? And what can you use it for?
+
+Build types define properties that Gradle uses when building and packaging your Android app.
+1. A build type defines how a module is built, for example whether ProGuard is run.
+2. A product flavour defines what is built, such as which resources are included in the build.
+3. Gradle creates a build variant for every possible combination of your project’s product flavours and build types.
+
+###### References
+* https://medium.com/@android2ee/playing-with-gradle-3-flavors-buildtypes-and-variants-ad5fe75158b9
+
 [[↑] Back to top](#core-android-questions)
 
 
